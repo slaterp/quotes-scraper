@@ -13,6 +13,16 @@ SPIDER_MODULES = ['quotes.spiders']
 NEWSPIDER_MODULE = 'quotes.spiders'
 
 
+# MongoDB settings
+ITEM_PIPELINES = {'quotes.pipelines.MongoDBPipeline': 100}
+
+MONGODB_SERVER = "localhost"
+MONGODB_PORT = 27017
+MONGODB_DB = "quotestoscrape"
+MONGODB_COLLECTION = "quotes"
+
+
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'quotes (+http://www.yourdomain.com)'
 
